@@ -1,10 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'students/base.html' %}
 
-</body>
-</html>
+{% block content %}
+    <div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <table class="table table-striped">
+                    <h2>Student Details</h2>
+                <tr>
+                    <th>Name</th>
+                    <td>{{ object.name }}</td>
+                </tr>
+                <tr>
+                    <th>contact</th>
+                    <td>{{ object.contact }}</td>
+                </tr>
+                <tr>
+                    <th>email</th>
+                    <td>{{ object.email }}</td>
+                </tr>
+                <tr>
+                    <th>city</th>
+                    <td>{{ object.city }}</td>
+                </tr>
+                <tr>
+                    <th>maths</th>
+                    <td>{{ object.maths }}</td>
+                </tr>
+                <tr>
+                    <th>science</th>
+                    <td>{{ object.sci }}</td>
+                </tr>
+                <tr>
+                    <th>SST</th>
+                    <td>{{ object.sst }}</td>
+                </tr>
+                <tr>
+                    <th>hindi</th>
+                    <td>{{ object.hindi }}</td>
+                </tr>
+                <tr>
+                    <th>English</th>
+                    <td>{{ object.english }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+{% endblock %}

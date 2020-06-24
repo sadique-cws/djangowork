@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'students/base.html' %}
 
-</body>
-</html>
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Form</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success btn-block" value="save">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
